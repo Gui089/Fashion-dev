@@ -48,6 +48,15 @@ const conjuntos = [
   {id:crypto.randomUUID(), name:"Jaqueta Manga Sino, Ombros Caídos E Vestido", price:140.68, priceBefore:293.78, imgUrl:'https://s3-alpha-sig.figma.com/img/93c1/ac27/cccd08a1c5f16d4a0ba2ebadf77fa793?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pXpch7Fm4XSjkI4SmHQ9s9ZPuKpAukoLkWPjns0wIk3OxK7c1MktZKfZP-vR8-gtARyE5sjCEC6F51MhFTohgM6mFEPrFDHc8jha7qv6dHPpFIQ4iCt8ht3VNPx9vMQGUlE9QNqzJwcGnQTIij8D-28QHh4w4SgYmDWZAOb3cpN7IfHfuR51lynBDY34HXMPAKfnMXSy6or3p7lKj6xpf9iaWbvUBaiTH4vfVIaN2YvgNL~OjdNqPW4VSFoDml80Kjtdbr2S5ffdEXYO4b3xaGToacDlgHE-5U7QK3uaGYUPtwaebY4CG2OV9vE24VoAZZToRB0A25NBB0cwwP1ucQ__'}
 ];
 
+const TShirts = [
+  {id:crypto.randomUUID(), name:'Blusas Impressão total Manga em Camadas',price:99.23,priceBefore:140.23, imgUrl:'https://s3-alpha-sig.figma.com/img/7999/798a/085727a2a7ce5a2544e261d5738f2a44?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=AbRIox5acuF7FJcER-1Rkk4co~jsPUgJ9jDuYkWxs~XBd7u9GQ8t0R9MnMZf9Z6Xvu2eXQ570fdm9y~ozVlFghtvsxSVZx2cCvq-Y~URhtU42MMsNE4wClWeK~kF08beagzQ~LUzO83z-~x6vmNMaIoLvffMcjYgJf1atV8mqwFa-5Ss4OwqbyzXeEYsXGeKznWu4jGAow1Hbp9tCRNupWk4EYe1LqH7dW~CZyP6-PHCJjBcR5FDc2AswZc13ZsYmpNThwR9qZuhRW8bhV3VYsY8nj~6hWAXdR732ee8jmYu5Jb1D6c2BJavIR4WLYnq4FTqWPM0of7Y8rSNEEkKlw__'},
+  {id:crypto.randomUUID(), name:'T-shirt Sólido Gola Redonda',price:67.59,priceBefore:99.00, imgUrl:'https://s3-alpha-sig.figma.com/img/b8da/363e/06ebf12a8984ea32d17f4aa28653ce4d?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NS0aKKt35mLD7yBn6adhOg5oFlnfIw6QciCJxGeyvAMFrJIDxnTuWr4Y96IOo1rzxdg8iJzSlCFqETj4EvteRpS53kVPsWqyeVhceRqEQXj5dxcnaBzGvH5D5uUrSbG2gWhHoZ~xeMbP2SY2WY8lZ2PJJcsAZenBCZGpY7oUJDh8drnszmxChGAHuhWNyeQuo6QeMlJFw2ZVCCWMJjaOR2RQ2NX4aOkYtIR6A~uubG55JiKvSUygqZ-qrKVap07kYZDK4dQQVh9pm9ZuqGlqoj9ChNLXYdAznjKito4Xg9sZaPMsj5EJp6bi65jWWXfDc2gDFC6aWFmcuIW86gM3qA__'},
+  {id:crypto.randomUUID(), name:'T-shirt Top sólido manga bufante',price:74.99,priceBefore:115.86, imgUrl:'https://s3-alpha-sig.figma.com/img/d21e/db1b/7f145cb408de1bf3ab13d44f48ac03cb?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WBDBHeuuH02JDzjUax1wDCxzn8cwP0bVNzqudVCAMHnK7e0xOI1DNqZj8DA0xGX0sQ5O~euE6H9RzrI9U3tXN90abLbSeXK6FlPA4jhog89lFUyMMC~Z4Ua5tcNB1i-UWMfZFMOrHWyTUMqma8iMp6tsrNNx~XKsTITeX8EYH0IVVgFPmAr-1qZkNRrrMQWEFHcE2hP0JC4zWYfKuI6Gf8~HpsjmCKZ8c~HXg6nwarGR0UJopj8ZGwgDqWNKPWoFnWhROQEuThjlV4o6BQOfN6YCYvqKs6Kj8rNVLW6VpxT3geItZzWrbtE44RAhNPT8k8qRuxzA9gV-F~oBOBg~OQ__'},
+  {id:crypto.randomUUID(), name:'T-shirt  gola quadrada manga bufante',price:109.99,priceBefore:299.78, imgUrl:'https://s3-alpha-sig.figma.com/img/1967/d5b6/3216760fa125e12469f879fa7b51bef2?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lc-3Krb7wb1~Z7EAZEPxaAfj6ODDLTOWTbzEC4ol36PjFo-YGIrZfOm151hy-YljfpZrjaQJI2E6Jk-mW5SVBV96jQ7E~~zWxAS-wPpglEgcVZVFWovUwdHGh5nBXfQNuLl8mXr8xIWJS0K8FEXnAn3Bqf3pj0PttXIJ8Cy45S-ugxF8gkxrL7owWoVTV-swabpOlHySUiU5jo-EcbDZ5JiJ~WkfWlYb~e7ZNctFTYRSTqjyd3aIOqhnI87b~JpPG~xzGNk3ahLMGXA5OiGvAg8n2zy~3wzhC6OsN~7wTkkjqG0OImLtYaxFIIaP1lQLI0iLDVOUFvmNvI0u3YlyIQ__'}
+];
+
+
+
 const Products = styled.div`
   margin-top:670px;
   wight:100%;
@@ -68,17 +77,27 @@ const TitleProducts = styled.h1`
 const ProductCard = styled.div`
   width:240px;
   height:380px;
-  margin-right:10px;
+  margin-right:15px;
   background-color:#FFF;
   margin-top:130px;
   color:#374151;
   font-family: Arial, Helvetica, sans-serif;
-  margin-left:-10%;
+  margin-left:-12%;
 `;
 
 const ImgProduct = styled.img`
   width:240px;
   height:272px;
+  cursor:pointer;
+
+  &:hover {
+    width:250px;
+    height:282px;
+    transition:0.3s;
+    margin-left:-5px;
+    border-radius:5px;
+    border:0.5px solid gray;
+  }
 `;
 
 const TitleCard = styled.h5`
@@ -103,6 +122,11 @@ const ButtonAddToCart = styled.button`
   margin-top:-15px;
   margin-left:50px;
   cursor:pointer;
+
+  &:hover {
+    padding:15px;
+    transition:0.3s;
+  }
 `;
 
 const Home = () => {
@@ -132,6 +156,20 @@ const Home = () => {
                </ProductCard>
             </li>)}
         </ul>
+        <ul style={{display:'inline-flex', listStyle:'none'}}>
+          {TShirts.map(product =>  <li key={product.id}>
+               <ProductCard>
+                <ImgProduct src={product.imgUrl} alt={product.name} />
+                <TitleCard>{product.name}</TitleCard>
+                <PriceInfo>
+                  <p><strong>${product.price}</strong></p>
+                  <p style={{marginLeft:'20px', fontWeight:'bold',color:"#9CA3AF" }}>$<s>{product.priceBefore}</s></p>
+                  <ButtonAddToCart>+</ButtonAddToCart>
+                </PriceInfo>
+               </ProductCard>
+            </li>)}
+        </ul>
+        <TitleProducts style={{marginTop:'530px'}}>T-Shirts</TitleProducts>
       </Products>
     </>
   )
