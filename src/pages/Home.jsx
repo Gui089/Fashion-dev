@@ -55,12 +55,19 @@ const TShirts = [
   {id:crypto.randomUUID(), name:'T-shirt  gola quadrada manga bufante',price:109.99,priceBefore:299.78, imgUrl:'https://s3-alpha-sig.figma.com/img/1967/d5b6/3216760fa125e12469f879fa7b51bef2?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Lc-3Krb7wb1~Z7EAZEPxaAfj6ODDLTOWTbzEC4ol36PjFo-YGIrZfOm151hy-YljfpZrjaQJI2E6Jk-mW5SVBV96jQ7E~~zWxAS-wPpglEgcVZVFWovUwdHGh5nBXfQNuLl8mXr8xIWJS0K8FEXnAn3Bqf3pj0PttXIJ8Cy45S-ugxF8gkxrL7owWoVTV-swabpOlHySUiU5jo-EcbDZ5JiJ~WkfWlYb~e7ZNctFTYRSTqjyd3aIOqhnI87b~JpPG~xzGNk3ahLMGXA5OiGvAg8n2zy~3wzhC6OsN~7wTkkjqG0OImLtYaxFIIaP1lQLI0iLDVOUFvmNvI0u3YlyIQ__'}
 ];
 
+const Casacos = [
+  {id:crypto.randomUUID(), name:'Casaco Sólido Manga de Bishop Frente Aberta', price:120.23, priceBefore:200.23, imgUrl:'https://s3-alpha-sig.figma.com/img/7c93/4196/105206f54c6fac913f4b5bc2eea49b9f?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VMKs2RcGwnLD9X96N930MUssjzy1RMZL2tflOlGTzF2boafaPjlGX16gV2k6Xp80ySM8Qgc7gevn1hQynYGs39Wu2TXL36DFLfRt~~oGQYDD8IfOckUZnwG3O0pAGaeZsCedb4KmSC03yXBDD-bgJd-2SF-PRZ2EdeG13eZlpvuck5MmPpS4KEm66rqlyaRuNrYHJnxvrL6WMhdfZLmtQMU6EE7suCxfvgIvP5F~fOuR2pgNCx76Pt-6U68W~KQheFBMgeG62jkDcqeLIzgh-9BWQ8MOBlBmQug5QcBK3GQMtmhE0lJ-N8hD~Nk1P~g7DqM6TeaqH-Y6PZfT9GrRaQ__'},
+  {id:crypto.randomUUID(), name:'Casaco Frente Aberta Ombro caído', price:79.90, priceBefore:120.23, imgUrl:'https://s3-alpha-sig.figma.com/img/1abc/7096/c09dd33024fb1b6a05359b0716d01dfb?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VZVo1J19FM75TwHXh-iEFpsp93O0-pm3cK8nYGADzxujSwesSkGZhgCTsVYF5I12PpmgUk0Xq4kgwndcwQ7INn3auFDvifu3t9VMonW0PvEN5aiO4O-MvLFNLmLjsJT7YOpPMcBOZmItuusI1LPxNBCdpCmdjSJZZqfRA8b8Wz~8f4OtBEaVlytJzvYE01Z5rqtBPYtI5DArRMW5kczoCpd7oExQvwGEJdC3n5s7-Klpn5Hk~sxifXvW6jqoYiQ-o2ztX37eyZTHb13BRAiD8dqJioQ1AjK0S7y2zzd8PINZEYPuai2gho0TOPrWTvDlXquJ5MDKosdYyiN44YcQyw__'},
+  {id:crypto.randomUUID(), name:'Sobretudos Trespassado com cinto', price:205.23, priceBefore:350.30, imgUrl:'https://s3-alpha-sig.figma.com/img/e4df/1142/0824bed14a0ec87f93b1528bbf85cc86?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mdGpMfAWYGoUK1M7-tEWwAXkYgajrvVBVjmtNUeufUjdttbDyakh4sPJM7b2JYTH~8y0HVNBmGy~gDlIZNKdqALrY8-bcyIGKpQTJMFSyibxaEJq~3PJY1K1OxmR3mDq4mMm~gggtMPhB7witE7iTtFSm9zyrOk29DR4q8yyMaFnYQW8es9eakFNJbQvMkRGyRrz64rVPpGlyGj4m4wLo~jUtSTq0F2ht1vY4reWnGqNRHLBGuxDLi5vsunla~4tDf0E8ioMK~2ZT~UtxcoALMjFuT0AFtA6nCH7er~q1m1vou~zpwjvGTYVc0A5j0c6VLZNgFGglhiCVSmrGnNbaA__'},
+  {id:crypto.randomUUID(), name:'Sobretudos femininos Bolso Simples elegante ', price:346.99, priceBefore:599.78, imgUrl:'https://s3-alpha-sig.figma.com/img/a6fe/7888/838c4bdbd2b385618087f3e08a12d9a6?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K63C5wMAOaIWcP3j3KWddmKgqdzagKC0c3zm9R8zGoRlCz5IPl6oNJHzow4cv7EUqcNnY72y~7eV7KCyX4WLwuj5wDzGhI1leMvL6H0BCBO-weL2xZtWUMNqiTkMM6pFue4Dj-BudxZtOe-oR7aS9MfKp8wVMgBbqhGukkJJxm64d78GckfsAeuzbMmiZdKri~Cgs3nljzbz2pklV9GdYDy-1VPhsMWYZHFbQqoCL4gvxqqgPXowXNS6iB-LM2RHwxzqqBG7JyAh7i9j15AcxMJDImaKuCZyrk9yRnIjBLh3BTIe~su4~u~N1oNkZpNmxlXbkQL41Qpngaqbq3M5JA__'}
+];
+
 
 
 const Products = styled.div`
   margin-top:670px;
   wight:100%;
-  height:1200px;
+  height:1750px;
   background-color:#F5F5F5;
   padding:50px;
   color:#374151;
@@ -170,6 +177,20 @@ const Home = () => {
             </li>)}
         </ul>
         <TitleProducts style={{marginTop:'530px'}}>T-Shirts</TitleProducts>
+        <TitleProducts style={{marginTop:'1030px'}}>Casacos</TitleProducts>
+        <ul style={{display:'inline-flex', listStyle:'none'}}>
+          {Casacos.map(product =>  <li key={product.id}>
+               <ProductCard>
+                <ImgProduct src={product.imgUrl} alt={product.name} />
+                <TitleCard>{product.name}</TitleCard>
+                <PriceInfo>
+                  <p><strong>${product.price}</strong></p>
+                  <p style={{marginLeft:'20px', fontWeight:'bold',color:"#9CA3AF" }}>$<s>{product.priceBefore}</s></p>
+                  <ButtonAddToCart>+</ButtonAddToCart>
+                </PriceInfo>
+               </ProductCard>
+            </li>)}
+        </ul>
       </Products>
     </>
   )
