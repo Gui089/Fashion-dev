@@ -62,8 +62,6 @@ const Casacos = [
   {id:crypto.randomUUID(), name:'Sobretudos femininos Bolso Simples elegante ', price:346.99, priceBefore:599.78, imgUrl:'https://s3-alpha-sig.figma.com/img/a6fe/7888/838c4bdbd2b385618087f3e08a12d9a6?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K63C5wMAOaIWcP3j3KWddmKgqdzagKC0c3zm9R8zGoRlCz5IPl6oNJHzow4cv7EUqcNnY72y~7eV7KCyX4WLwuj5wDzGhI1leMvL6H0BCBO-weL2xZtWUMNqiTkMM6pFue4Dj-BudxZtOe-oR7aS9MfKp8wVMgBbqhGukkJJxm64d78GckfsAeuzbMmiZdKri~Cgs3nljzbz2pklV9GdYDy-1VPhsMWYZHFbQqoCL4gvxqqgPXowXNS6iB-LM2RHwxzqqBG7JyAh7i9j15AcxMJDImaKuCZyrk9yRnIjBLh3BTIe~su4~u~N1oNkZpNmxlXbkQL41Qpngaqbq3M5JA__'}
 ];
 
-
-
 const Products = styled.div`
   margin-top:670px;
   wight:100%;
@@ -154,7 +152,7 @@ const CardInfo = styled.div`
   height:120px;
   width:auto;
   margin-top:80px;
-  margin-right:80px;
+  margin-right:60px;
 `;
 
 const TitleInfo = styled.h3`
@@ -168,7 +166,8 @@ const ParagraphInfo = styled.p`
   color:#6B7280;
   font-family:'Arial';
   font-weight:400;
-  padding:5px;
+  padding:3px;
+  font-size:13px;
 `;
 
 const Home = () => {
@@ -297,6 +296,10 @@ const Home = () => {
                </clipPath>
                </defs>
                </svg>
+            </div>
+            <div>
+              <h5 style={{color:'#1F2937', fontFamily:'Arial', fontWeight:'700', marginTop:'15px'}}>Se inscreva para receber as novidades</h5>
+              <input style={{padding:'10px', width:'300px', marginTop:'5px'}} type="text" placeholder='Seu e-mail'/>
             </div>
           </CardInfo>
         </Section>
