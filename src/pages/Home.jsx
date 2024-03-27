@@ -2,12 +2,12 @@ import { Header } from '../components/Header';
 import styled from 'styled-components';
 import { Form, Link, useLoaderData} from 'react-router-dom';
 
-const Painel = styled.section `
+const Painel = styled.section`
   width: 100%;
   height: 708px;
   background-image: 
     linear-gradient(90deg, rgba(121,66,40,0.8), rgba(255,255,255,0.2)),
-    url('fashionDevCapa.jpeg');
+    url('https://s3-alpha-sig.figma.com/img/5fc9/6618/bf4af5de736405bcb54eb1c88ec9636a?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hLkylUw0RnTLt2mnkorpbdHlmCiIxy9WSSncflId9ukiHblEjoXHZ1TyfVRVwnlv6zpZP7BuSCPrLZ0jh0B17dBHndl78LFTYZlZ4Zt6gcygkT54gsVy1Z2BDjBIs8LR-W0g1URAlHGeo2G2ODqv5VLp7e1dPhyN6o5KofMLvbAR-a1HkSvVyOjt6xAot3ylFK3dyUV07XemjmjPj0qO30H1Jj~hkPbcZUGnToOXfGsPIAb~ZvSlTpNKLHi5qzwrxljAyjD06uN14xbls9Rzkfe-FEYM-qSdgPxsx3yKgLa7GaRNH16JvIzzmUaJHac9KY80oi0rnZAcOTYK69rRLA__');
   background-size: cover;
   background-position: center;
   position:absolute;
