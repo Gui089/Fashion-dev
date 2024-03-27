@@ -67,6 +67,19 @@ const ButtonSize = styled.button`
   cursor:pointer;
 `;
 
+const ButtonAddCart = styled.button`
+  background-color:black;
+  color:white;
+  font-family:'Arial';
+  margin-left:50px;
+  border:none;
+  border-radius:24px;
+  padding:30px;
+  position:absolute;
+  margin-top:570px;
+  cursor:pointer;
+`;
+
 const infoProduct = async (productId) => {
   const products = await fetch('https://raw.githubusercontent.com/stack-code-dev/devfashion/master/json/dados.json');
   const data = await products.json();
@@ -75,6 +88,7 @@ const infoProduct = async (productId) => {
 }
 
 const InfoProduct = () => {
+  const [optionSize, setOptionSize] = useState([]);
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   
@@ -83,6 +97,8 @@ const InfoProduct = () => {
       const product = await infoProduct(id);
       const newProduct = product.product;
       const findItemProduct = newProduct.find(item => id === item.id);
+      const optionSize = findItemProduct.itens[0].part_sizes;
+      setOptionSize(optionSize);
       setProduct(findItemProduct);
       return product;
     }
@@ -92,7 +108,6 @@ const InfoProduct = () => {
   const itensProduct = product?.itens;
   const findColorProduct = itensProduct?.find(item => product?.image === item.image);
 
-  console.log(itensProduct);
   return (
     <>
       <Header />
@@ -108,13 +123,14 @@ const InfoProduct = () => {
           </li>
         )}
       </ul>}
-      {/* {<ul style={{display:'inline-flex', position:'absolute', marginTop:'500px', marginLeft:'60px', listStyle:'none'}}>
-        {itensProduct[0]?.part_sizes?.map(item => 
+      {<ul style={{display:'inline-flex', position:'absolute', marginTop:'500px', marginLeft:'60px', listStyle:'none'}}>
+        {optionSize.map(item => 
           <li key={item.size}>
-            <ButtonSize>{item.size}</ButtonSize>
+            <ButtonSize><h1 style={{fontWeight:100}}>{item.size}</h1></ButtonSize>
           </li>  
         )}
-      </ul>} */}
+      </ul>}
+      <ButtonAddCart><h1>ADICIONAR AO CARRINHO</h1></ButtonAddCart> 
     </>
   );
 }
