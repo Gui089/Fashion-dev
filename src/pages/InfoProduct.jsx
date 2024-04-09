@@ -80,6 +80,12 @@ const ButtonAddCart = styled.button`
   cursor:pointer;
 `;
 
+const StarImg = styled.img`
+  width: 33.68px;
+  height: 30px;
+  padding-right: 5px;
+`;
+
 const infoProduct = async (productId) => {
   const products = await fetch('https://raw.githubusercontent.com/stack-code-dev/devfashion/master/json/dados.json');
   const data = await products.json();
@@ -108,11 +114,23 @@ const InfoProduct = () => {
   const itensProduct = product?.itens;
   const findColorProduct = itensProduct?.find(item => product?.image === item.image);
 
+  const StarRating = findColorProduct?.stars;
+
+  console.log(findColorProduct);
+
   return (
     <>
       <Header />
       <ImageCard src={findColorProduct?.image} alt={product?.product_name} />
       <TitleProduct >{product?.product_name}</TitleProduct>
+      <ul style={{position:'absolute', top:'260px', right:'210px', display:'inline-flex'}}>
+        {Array.from({length: StarRating}, (_, i) => 
+           <li key={i} style={{display: 'inline-flex'}}>
+              <StarImg src="https://pluspng.com/img-png/star-png-star-vector-png-transparent-image-2000.png" alt="" />
+           </li>
+        )}
+        <p style={{marginTop:'10px', fontWeight:'lighter', color:'#374151', fontFamily:'Arial'}}>({findColorProduct?.assessments} Avaliações)</p>
+      </ul>
       <PriceProduct>${product?.current_price}</PriceProduct>
       <OldPrice>$ <s>{product?.old_price}</s></OldPrice>
       <ShowColor>Cor: {findColorProduct?.color}</ShowColor>
